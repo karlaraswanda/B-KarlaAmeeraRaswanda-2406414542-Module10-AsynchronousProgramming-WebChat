@@ -13,3 +13,14 @@ use yew_router::prelude::*;
 #[global_allocator]
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
+#[function_component(App)]
+fn app() -> Html {
+    html! {
+        <h1>{ "YewChat is running!" }</h1>
+    }
+}
+
+#[wasm_bindgen]
+pub fn run_app() {
+    yew::start_app::<App>();
+}
